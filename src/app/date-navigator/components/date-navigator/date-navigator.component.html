@@ -1,0 +1,45 @@
+<div class="navigator-wrapper">
+    <div class="navigator-title">
+        <div class="navigator-title-date">{{getCurrentMonth()}} {{getCurrentYear()}}</div>
+        <div class="navigator-title-move">
+            <div class="icon-wrapper">
+            <div class="icon">
+                <mat-icon aria-hidden="false" aria-label="home" [inline]="true">keyboard_arrow_left</mat-icon>
+            </div>
+             
+        </div>
+        <div class="icon-wrapper">
+            <div class="icon" (click)="onNextMonth()" >
+                <mat-icon aria-hidden="false" aria-label="home" [inline]="true">keyboard_arrow_right</mat-icon>
+            </div>
+             
+        </div>
+          
+            
+        </div>
+    </div>
+    <div class="navigator-main">
+        <div class="navigator-header"   >
+            <div *ngFor="let item of arrayDaysOfWeek">
+                <col-tooltip message={{item.dayName}}>
+                <div class="header-item" >
+                    {{item.dayNameShort}}
+                   
+                </div>
+               </col-tooltip>
+            </div>    
+           
+        </div>
+        <div class="navigator-content">
+            <div class="content-first-week" *ngFor="let slot of arrayMultiDaysOfMonth; let i=index">
+                <div class="first-week-day" *ngFor="let item of arrayMultiDaysOfMonth[i]">
+                 
+                    <div class="day" [ngClass]="[getCurrentDateOfMonth(item)  ? 'day active' : 'day', getActiveMonth(item) ? 'active_font': 'day']"  (click)="onClickDay(item)">{{getDate(item)}}</div>
+                    
+                    
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</div>

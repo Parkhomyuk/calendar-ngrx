@@ -1,0 +1,70 @@
+@import 'src/app/styles/_global.scss';
+.time-picker-wrapper{
+    width: 200px;
+    height: 250px;
+    border: $border_default;
+    .picker-content{
+        display: flex;
+        flex-direction: column;
+        justify-content: start;
+        align-items: center;
+        .picker-header{
+            height: 50px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            font-size: $font_size_default*3;
+            background-color: rgb(67, 92, 235);
+            color: $color_background_parts_not_active;
+            .header-type{
+                font-size: $font_size_default*1;
+                margin-left: 0.5rem;
+                .note{
+                    font-weight: bold;
+                }
+                .not-active{
+                    color: $color_text_default;
+                    font-weight: 400;
+                }
+            }
+            
+
+        }
+        .picker-sector{
+            background-color: $color_background_parts_active;
+            width: 100%;
+            height: 200px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            .sector-circle{
+                width: 95%;
+                height: 95%;
+                background-color: white;
+                border-radius: 100%;
+                position: relative;
+                .hours-circle{
+                    position: absolute;
+                    .circle-number{
+                    
+                     
+                    }
+                }
+                
+                .circle-pointer{
+                    width: 3%;
+                    height: 3%;
+                    background-color: blue;
+                    position: absolute;
+                    border-radius: 100%;
+                    top:48.5%;
+                    left: 48.5%;
+
+                }
+            }
+        }
+    }
+}

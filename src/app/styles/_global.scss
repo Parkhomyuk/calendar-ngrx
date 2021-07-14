@@ -1,0 +1,35 @@
+// colors
+$color_border: #dadce0;
+$color_text_default: #3c4043;
+$color_background_parts_active: rgb(221, 221, 221);
+$color_background_parts_not_active: white;
+$color_item_active: #1a73e8;;
+
+// font
+$font_family_main: 'Google Sans',Roboto,Arial,sans-serif;
+$font_size_default: 0.75rem;
+$font_size_phone: 0.5rem;
+
+// shadows
+$shadow_box: 0 4px 6px 0 rgba(0, 0, 0, 0.2), 0 4px 10px 0 rgba(0, 0, 0, 0.19);
+$shadow_box_inner: inset 0 2px 2px 0 rgba(0, 0, 0, 0.2), 0 2px 2px 0 rgba(0, 0, 0, 0.19);
+//height
+$height_btn: 28px;
+//border
+$border_default: 0.5px solid rgb(218, 219, 219);
+//media
+@mixin for-phone-only {
+    @media (max-width: 599px) { @content; }
+  }
+  @mixin for-tablet-portrait-up {
+    @media (min-width: 600px) { @content; }
+  }
+  @mixin for-tablet-landscape-up {
+    @media (min-width: 900px) { @content; }
+  }
+  @mixin for-desktop-up {
+    @media (min-width: 1200px) { @content; }
+  }
+  @mixin for-big-desktop-up {
+    @media (min-width: 1800px) { @content; }
+  }

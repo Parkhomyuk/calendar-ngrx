@@ -1,0 +1,27 @@
+<div class="time-picker-wrapper">
+    <div class="picker-content">
+        <div class="picker-header">
+           <span>{{currentTime.hour}}</span>
+           : 
+           <span>{{currentTime.minutes}}</span> 
+            
+             
+            <div class="header-type">
+                <div class="pm" [ngClass]="{ 'pm not-active': currentTime.typeDay!='PM' }">PM</div>
+                <div class="am" [ngClass]="{ 'am not-active': currentTime.typeDay !='AM' }">AM</div>
+            </div>
+             
+        </div>
+        <div class="picker-sector">
+            <div class="sector-circle">
+                <div class="circle-pointer"></div> 
+                <div class="hours-circle">
+                    <div class="circle-number" *ngFor="let item of timeSlot"  >
+                        <div [style.transform]="'rotate('+item.trnsform+'deg)'">{{item.title}}</div>    
+                        </div>   
+                </div>
+              
+            </div>
+        </div>
+    </div>
+</div>

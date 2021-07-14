@@ -1,0 +1,82 @@
+@import 'src/app/styles/_global.scss';
+.wrapper-header{
+    margin-top: 0;     
+    height: inherit;
+    width: 86vw;
+    border: $border_default;
+    border-left: none;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: left;
+    align-items: flex-start;
+    position: absolute;
+    top:0;    
+    padding-top: 50px;
+    z-index: 10;
+    position: fixed;
+    background-color: white;
+    .wrapper-gmt{
+        font-size:$font_size_default*0.65 ;
+        width:4%;
+        margin-top: 45px;  
+        margin-right: 0px;  
+        text-align: end; 
+        padding-right: 5px; 
+        
+    }
+    .week-section{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        width: 14%;
+        background-color: white;
+        position: relative;
+        .wrapper-date{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: nowrap;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top:0;
+            left:38%;
+            height: 60px;
+            .section-week-day{
+                font-size: $font_size_default*0.75;
+                
+            }
+            .section-month-day,.today{
+                font-size: $font_size_default*1.5;
+                width: 35px;
+                height: 35px;                 
+                display: flex;
+                flex-direction: column;
+                flex-wrap: nowrap;
+                justify-content: center;
+                align-items: center;
+            }
+            .toDay{
+            
+                background-color: #1a73e8;
+                
+                color: white;
+                border-radius: 100%;
+            }
+            .activeDay{
+                color: #1a73e8;
+                
+            }
+        }
+        
+        .section-gmt{
+            height: 15px;
+            margin-top: 50px;
+            width: 100%;            
+            border-left: #dadce0 1px solid;
+        }
+        
+    }
+}

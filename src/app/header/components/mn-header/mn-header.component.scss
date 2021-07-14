@@ -1,0 +1,101 @@
+@import 'src/app/styles/_global.scss';
+.header-wrapper{
+    width: 100vw;
+    height: 50px;
+    border-bottom: $border_default;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    position: absolute;
+    z-index: 100;
+    background-color: white;
+    position: fixed;
+    .sidebar-icon-manage{
+        height: 35px;
+        width: 30%;
+        margin-left: 20px ;
+        display: flex;
+        flex-direction: row;
+        justify-content: left;
+        align-items: center;
+        .manage-wrapper{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-radius: 100%; 
+            cursor: pointer;
+            
+            width: 35px;
+            height: 35px;
+             
+        }
+        .manage-wrapper:hover{
+            background-color: $color_border;
+            border-radius: 100%; 
+            cursor: pointer;
+            
+        }
+        .active-icon{
+            background-color: $color_border;
+            border-radius: 100%; 
+            cursor: pointer;
+            width: 35px;
+            height: 35px;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+        .date-icon{
+            margin-left: 10px;
+            img{
+                width: 35px;
+                height: 35px;
+            }
+        }
+        .current-today-button{
+            margin-left: 50px;
+            margin-right: 20px;
+            height: 35px;
+            .today{
+                height: inherit;
+                width: 70px;
+                background-color: white;
+                border-radius: 5px;
+                border: $border_default
+            }
+        }
+        .icon-wrapper:hover{ 
+            transition: 1s;
+            background-color: $color_background_parts_active; 
+            width:35px;
+            height:35px;
+        }  
+        .icon-wrapper{ 
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            margin-left: -10px; 
+            border-radius: 100%;
+            width:35px;
+            height:35px;
+            cursor: pointer;       
+        .icon{    
+            font-size: 18px;  
+            padding: 0;
+            margin: 0;
+        }
+    }
+        .current-period{
+            width: 150px;
+            margin-left:20px;
+            color: 2rem;
+            font-size: $font_size_default*1.5;
+        }
+    }
+     
+}

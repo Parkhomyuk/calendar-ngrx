@@ -1,0 +1,29 @@
+<div class="wrapper-area-grid" #wrapperCon [@openClose]="(sideBarState$ | async) ? 'open' : 'closed'">
+
+     
+    <div class="wrapper-rows" >
+        
+        <div class="wrapper-gmt"></div> 
+       <div class="week-section"  *ngFor="let item of currentWeekArray; let i=index" (click)="onDetect(item)" attr.id="{{i}}" >
+         
+  
+            <ng-container *ngIf="detecCurrentDay(item)">
+                <div class="currentTime" #line>
+                    <div class="currentTimePoint"  ></div>
+                   </div>
+             </ng-container>
+         
+       
+               
+        
+           
+       </div>    
+       
+       <!-- <co-event-details   #detail position="position"></co-event-details> -->
+       <co-event-details *ngIf="eventDetailsOpened" #detail [position]="position" (detailStatus)="closeFromChild($event)" eventDetailsOpened="status"></co-event-details>
+  </div>
+  
+    
+ 
+      
+ </div>

@@ -1,0 +1,38 @@
+<div class="header-wrapper">
+    <div class="sidebar-icon-manage">
+        <div class="manage-wrapper" [ngClass]="{'manage-wrapper': (status$ | async), ' active-icon': !(status$ | async)}">
+            <div class="icon" (click)="onSidebar()">
+                <mat-icon aria-hidden="false" aria-label="home" [inline]="true" *ngIf="(status$ | async)===true">menu</mat-icon>
+                <mat-icon aria-hidden="false" aria-label="home" [inline]="true" *ngIf="(status$ | async)===false">keyboard_tab</mat-icon>
+            </div>
+            
+        </div>
+        <div class="date-icon">
+            <img [src]="dateIcon" alt="icon-calendar">
+        </div>
+        <div class="current-today-button" (click)="today()">
+            <button class="today">Today</button>
+        </div>
+        <div class="icon-wrapper">
+            <div class="icon"  (click)="onPreviousWeek()">
+                <mat-icon aria-hidden="false" aria-label="home" [inline]="true">keyboard_arrow_left</mat-icon>
+            </div>
+             
+        </div>
+        <div class="icon-wrapper">
+            <div class="icon" (click)="onNextWeek()" >
+                <mat-icon aria-hidden="false" aria-label="home" [inline]="true">keyboard_arrow_right</mat-icon>
+            </div>
+             
+        </div>
+        <div class="current-period" *ngIf="(currentDate$ | async) as date">
+            {{getFullMonthName(date)}} {{date.currentYear}}
+        </div>
+         
+         
+    </div>
+    
+    <div> status {{status$ | async}}</div>
+    <div *ngIf="(currentDate$ | async) as currentDate">{{currentDate.dayOfMonth}}-{{currentDate.currentMonth}}-{{currentDate.currentYear}}</div>
+    <div>1</div>
+</div>

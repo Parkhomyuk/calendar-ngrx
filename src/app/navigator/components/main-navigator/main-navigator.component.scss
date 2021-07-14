@@ -1,0 +1,88 @@
+@import 'src/app/styles/_global.scss';
+.navigator-wrapper{
+    width: 200px;
+    height: auto;
+    // border: 1px solid grey;
+    padding: 5px;
+    .navigator-title{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: nowrap;
+        padding: 0 1rem 1rem 0.5rem;
+        .navigator-title-move{
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: nowrap;
+            .icon-wrapper:hover{ 
+                transition: 1s;
+                background-color: $color_background_parts_active; 
+            }  
+            .icon-wrapper{ 
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                flex-wrap: nowrap;
+                 
+                border-radius: 100%;
+                width:20px;
+                height:20px;
+                cursor: pointer;       
+            .icon{    
+                font-size: 18px;  
+                padding: 0;
+                margin: 0;
+            }
+            }
+        }
+    }
+    .navigator-main{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        flex-wrap: nowrap;
+        .navigator-header{
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: nowrap;
+            font-size: $font_size_default*0.8;
+            padding-bottom: 5px;
+        }
+        .navigator-content{
+            width: 100%;
+           
+            .content-first-week{
+                display: flex;
+                flex-direction: row;
+                justify-content: space-around;
+                align-items: center;
+                flex-wrap: nowrap;
+                margin-bottom: 5px;
+                .first-week-day{
+                     width: 20px;
+                     height: 20px;
+                     text-align: center;
+                     font-size: $font_size_default*0.75;  
+                     cursor: pointer;
+                    .active{
+                        border-radius: 100%;
+                        background-color: $color_item_active;
+                        color:white;
+                    }
+                    .currentMonth{
+                        font-weight: bold;
+                    }
+                }
+            }
+        }
+    }
+
+}

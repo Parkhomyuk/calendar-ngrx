@@ -1,0 +1,34 @@
+@import 'src/app/styles/_global.scss';
+.button-wrapper{
+    .button-item:focus{
+        outline: none;
+    }
+    .button-item{
+        height: $height_btn;
+        padding-left: 0.75rem;
+        padding-right: 0.75rem;
+        background-color: $color_background_parts_not_active;
+        border: $color_border 1px solid;
+        border-radius: 2px;
+        cursor: pointer;
+        margin: 0px 0px 0px 0px;
+        font-family: $font_family_main;
+        font-size: $font_size_default;
+        font-weight: 500;
+        letter-spacing: .25px;
+        text-transform: none;
+        opacity: 1;
+        color: $color_text_default;        
+        width:84px;
+        transition: 0.5s;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: nowrap;
+    }
+    .button-item:hover{
+        transition: 2s;
+        background-color: $color_background_parts_active;
+    }
+}

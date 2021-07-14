@@ -1,0 +1,28 @@
+<div class="wrapper-area-grid" #wrapperCon [@openClose]="(sideBarState$ | async) ? 'open' : 'closed'">
+
+   <div class="wrapper-rows" *ngFor="let row of weekGrid; let i=index">
+      <!-- <co-event-board-day  data="{{i}}"> </co-event-board-day> -->
+         <div class="wrapper-gmt">
+            
+            <div class="gnt-hour">
+               
+              <ng-container *ngIf="i<23">{{row.time}} {{row.half}}</ng-container>
+                
+            </div>    
+            
+        </div> 
+        <div class="week-section">
+          
+        </div>    
+        <div class="week-section"></div>    
+        <div class="week-section"></div>    
+        <div class="week-section"></div>    
+        <div class="week-section"></div>    
+        <div class="week-section"></div>    
+        <div class="week-section"></div>    
+         
+   </div>
+   
+     
+     
+</div>

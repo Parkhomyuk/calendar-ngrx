@@ -1,0 +1,27 @@
+.sidebar-wrapper{
+    background-color: white;
+    height: 100vh;
+    position: fixed;
+     z-index: 11;
+    top:50px;
+    left:10px;
+    .add-event{
+        margin:  15px 0 15px 5px;
+        .btn-create{
+            width: 100px;
+            height: 35px;
+            background-color: white;
+            border-radius: 30px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-around;
+            align-items: center;
+            border: #dadce0 1px solid;
+            box-shadow:1px -1px 5px -1px  #dadce0;
+        }
+        .btn-create:hover{
+            box-shadow:box-shadow 280ms cubic-bezier(0.4,0,0.2,1),opacity 15ms linear 30ms,transform 270ms 0ms cubic-bezier(0,0,0.2,1);;
+            background-color: rgb(248, 248, 252);
+        }
+    }
+}

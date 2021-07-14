@@ -1,0 +1,96 @@
+@import 'src/app/styles/_global.scss';
+.dropdown-wrapper{
+    position: relative;     
+    width: 84px;
+    position: relative;
+    height: auto; 
+    @include for-phone-only {    
+        width: 42px;
+        
+     }
+    .btn-wrapper{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        align-items: center;
+        position: relative;
+        .btn-main{
+            height: $height_btn;
+            padding-left: 0.75rem;
+            padding-right: 0.75rem;
+            background-color: $color_background_parts_not_active;
+            border: $color_border 1px solid;
+            border-radius: 2px;
+            cursor: pointer;
+            margin: 0px 0px 0px 0px;
+            font-family: $font_family_main;
+            font-size: $font_size_default;
+            font-weight: 500;
+            letter-spacing: .25px;
+            text-transform: none;
+            opacity: 1;
+            color: $color_text_default;        
+            width:84px;
+            transition: 0.5s;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            align-items: center;
+            flex-wrap: nowrap;
+            @include for-phone-only {    
+                font-size: $font_size_phone; 
+                padding-left: 0.5rem;
+                padding-right: 0.5rem;
+
+             }
+            .btn-title{
+
+                width: 80%;
+                overflow-wrap: normal;
+
+                @include for-phone-only { 
+                    width: 50%;
+                }
+            }
+            .btn-icon{
+                width: 20%;
+                 
+                
+                @include for-phone-only { 
+                    width: 50%;
+                }
+                .icon{
+                    pointer-events: none; 
+                }
+            }
+        }
+        .btn-main:focus{
+            outline: none
+        }
+        .btn-main:hover{
+            transition: 2s;
+            background-color: $color_background_parts_active;
+            
+        }
+
+    }
+    .dropdown-list{
+        position: absolute;
+        top:$height_btn+4px;
+        left:0px;
+        height: auto;
+        width: 150px; 
+        border: $color_border 1px solid;
+        border-radius: 2px;
+        font-family: $font_family_main;
+        font-size: $font_size_default;
+        font-weight: 500;
+        margin: 0px 0px 0px 0px;
+        box-shadow: $shadow_box;
+        background-color: $color_background_parts_not_active;
+         
+        
+       
+    }
+}

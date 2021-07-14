@@ -1,0 +1,13 @@
+ 
+ <div class="wrapper-header" #wrapperCon [@openClose]="(statusSideBar$ | async) ? 'open' : 'closed'">
+     <div class="wrapper-gmt">GMT+03</div> 
+     <div class="week-section" *ngFor="let item of currentWeek; let i=index">
+         <div class="wrapper-date">
+            <div class="section-week-day" [ngClass]="onCurrentDate(item) ? 'activeDay section-week-day ':'section-week-day ' ">{{getDayOfWeek(item)}}</div>
+            <div class="section-month-day" [ngClass]="onCurrentDate(item) ? 'section-month-day toDay':  'section-month-day'">{{item.dayOfMonth}}</div>
+         </div>
+        
+         <div class="section-gmt"></div>
+     </div>    
+      
+ </div>

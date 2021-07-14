@@ -1,0 +1,99 @@
+@import 'src/app/styles/_global.scss';
+.wrapper-area-grid{
+    margin-top: 0;
+         
+    height: inherit;
+    width: 86vw;  
+    
+    position: absolute;
+    top:45px;
+    left:0px;    
+    padding-top: 70px;
+    z-index: 9;
+    
+    .wrapper-rows{
+         position: relative;
+        border-left: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: left;
+        align-items: flex-start;
+        font-size:$font_size_default*0.65 ;        
+        
+            .wrapper-gmt{                
+                width:4%;
+                height: 960px;
+                padding-right: 5px;
+                padding-left: 10px;
+                border-bottom: $border_default;
+                position: relative;                
+                
+            }
+            .week-section{
+                // display: flex;
+                // flex-direction: column;
+                // flex-wrap: nowrap;
+                // justify-content: center;
+                // align-items: center;
+                width: 14%;
+                height: 960px;
+                 
+                 
+                              
+                padding-left: 0px;
+                
+                background-color: rgba(220, 232, 250, 0.123);
+                position: relative;
+                .currentTime{
+                    position: absolute;
+                    width: 100%;
+                    height: 1px;
+                     
+                    background-color: red;
+                }
+                .currentTimePoint{
+                    position: absolute;
+                    width: 8px;
+                    height: 8px;
+                    border-radius: 100px;
+                    top: -3px;
+                    left: -4px;
+                    background-color: red;
+                }
+                .event{
+                    position: absolute;
+                    top: 0;
+                    left:0;
+                    width: 80%;
+                    height: 38px;
+                    background-color: rgb(124, 160, 226);
+                    border-radius: 4px;
+                   // box-shadow: 0px 24px 38px 3px rgb(0 0 0 / 14%), 0px 9px 46px 8px rgb(0 0 0 / 12%), 0px 11px 15px -7px rgb(0 0 0 / 20%);
+                    box-shadow: 0px 12px 20px 3px rgb(0 0 0 / 7%), 0px 9px 23px 8px rgb(0 0 0 / 12%), 0px 11px 7px -7px rgb(0 0 0 / 20%);
+                  .events-wrapper{
+                      display: flex;
+                      flex-direction: column;
+                      flex-wrap: nowrap;
+                      justify-content: flex-start;
+                      align-items:  flex-start;
+                      padding-left: 1rem;
+                      .event-title{
+                          color: white;
+                          font-weight: bolt;
+                          font-size: $font_size_default;
+                      }
+                      .event-time{
+                        color: white;
+                        font-weight: bolt;
+                        font-size: $font_size_default*0.75;
+                        margin-bottom: 2px;
+                        .space{
+                            margin: 0 3px 0 3px;
+                        }
+                      }
+                  }   
+                }
+            }
+}
+}

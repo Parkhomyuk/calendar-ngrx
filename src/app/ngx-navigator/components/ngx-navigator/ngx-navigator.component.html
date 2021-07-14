@@ -1,0 +1,49 @@
+<div class="navigator-wrapper">
+    <div class="navigator-title">
+        <div class="navigator-title-date">{{currentPeriod.format('MMMM')}} {{currentPeriod.year()}}</div>
+        <div class="navigator-title-move">
+         <div class="icon-wrapper">
+            <div class="icon" (click)="onPrevMonth()">
+                <mat-icon aria-hidden="false" aria-label="home" [inline]="true">keyboard_arrow_left</mat-icon>
+            </div>
+             
+        </div>
+        <div class="icon-wrapper">
+            <div class="icon today" (click)="onToday()">
+                <mat-icon aria-hidden="false" aria-label="home" [inline]="true">home</mat-icon>
+            </div>
+             
+        </div>
+        <div class="icon-wrapper">
+            <div class="icon" (click)="onNextMonth()">
+                <mat-icon aria-hidden="false" aria-label="home" [inline]="true">keyboard_arrow_right</mat-icon>
+            </div>
+             
+        </div>
+          
+            
+        </div>
+    </div>
+    <div class="navigator-main">
+        <div class="navigator-header"   >
+            <div *ngFor="let item of arrayHeaderDaysOfWeek">
+                <col-tooltip message={{item.dayName}}>
+                <div class="header-item" >
+                    {{item.dayNameShort}}
+                   
+                </div>
+               </col-tooltip>
+            </div>    
+           
+        </div>
+        <div class="navigator-content">
+            <div class="content-first-week" *ngFor="let slot of arrayDaysOfCurrentMonth; let i=index">
+                <div class="first-week-day" *ngFor="let item of arrayDaysOfCurrentMonth[i]">                 
+                    <div class="day"  [ngClass]="[getCurrentDateOfMonth(item)  ? 'day active' : getHoliday(item) ? 'day holiday':  getActiveMonth(item) ? 'day active_font': 'day']" (click)="onClickDay(item)"  >{{item.dayOfMonth}}</div>                    
+                    
+                </div>
+            </div>
+            
+        </div>
+     </div>   
+</div>

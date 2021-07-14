@@ -1,0 +1,20 @@
+<!-- <div class="sidebar-wrapper" *ngIf="(status$ | async)===true"   > -->
+  
+<div class="sidebar-wrapper" [@openClose]="(status$ | async) ? 'open' : 'closed'" >
+    <div class="add-event">
+        <button class="btn-create">
+            <span>+ </span>
+            <span>Create</span>
+        </button>
+    </div>  
+    <col-ngx-navigator iconSize="56" (currentDateOut)="getCurrentDate($event)" curentDate="(currentDate$ | async)"></col-ngx-navigator>
+     
+    <div>Month {{currentDay.currentMonth}}</div>
+    <div>day of Month {{currentDay.dayOfMonth}}</div>
+    <div>day of Week {{currentDay.dayOfWeek}}</div>
+    <div>week of year {{currentDay.weekOfYear}}</div>
+    <div>Year {{currentDay.currentYear}}</div>   
+    <div>---------------</div> 
+    <div *ngIf="(currentDate$ | async) as currentDate">async {{currentDate.dayOfMonth}}</div>
+    
+</div>
